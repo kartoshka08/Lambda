@@ -8,7 +8,10 @@ public class Calculator {
     BinaryOperator<Integer> multiply = (x, y) -> x * y;
     BinaryOperator<Integer> devide = (x, y) -> {
         if (y != 0) return x / y;
-else throw new ArithmeticException("Ошибка! На 0 делить нельзя.");
+    else {
+            System.out.println("Ошибка! На 0 делить нельзя.");
+            return 0;
+        }
     };
 
     UnaryOperator<Integer> pow = x -> x * x;
